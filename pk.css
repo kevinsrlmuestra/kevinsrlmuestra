@@ -165,7 +165,7 @@ footer {
   font-size: 30px;
   cursor: pointer;
 }
-@media (max-width: 768px) {
+@media (max-width: 500px) {
   .menuToggle {
     display: block;
   }
