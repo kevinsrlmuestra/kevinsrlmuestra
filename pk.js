@@ -21,3 +21,10 @@ slider.onpointerdown = function () {
 slider.onpointerup = function () {
   interval = setInterval(next, 5000);
 };
+/*menu hamburguesa*/
+var toggle = document.querySelector(".menuToggle");
+var menu = document.querySelector(".buttonContainer");
+
+toggle.addEventListener("click", function () {
+  menu.classList.toggle("active");
+});

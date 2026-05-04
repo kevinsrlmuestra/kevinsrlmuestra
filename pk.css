@@ -159,3 +159,21 @@ footer {
 footer {
   height: 5vh;
 }
+/*Menu hamburguesa para celulares*/
+.menuToggle {
+  display: none;
+  font-size: 30px;
+  cursor: pointer;
+}
+@media (max-width: 768px) {
+  .menuToggle {
+    display: block;
+  }
+  .buttonContainer {
+    display: none;
+    flex-direction: column;
+  }
+  .buttonContainer.active {
+    display: flex;
+  }
+}
