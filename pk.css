@@ -178,6 +178,9 @@ footer {
   header {
     padding: 0 3vw;
   }
+  header div img {
+    padding: 3vw;
+  }
 
   .buttonContainer {
     display: none;

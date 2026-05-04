@@ -17,18 +17,18 @@ function next() {
 
 showSlide(index);
 
+interval = setInterval(next, 5000);
+
 if (!isMobile) {
-  interval = setInterval(next, 5000);
-
   var slider = document.getElementById("slider");
-
-  slider.onpointerdown = function () {
-    clearInterval(interval);
-  };
-
-  slider.onpointerup = function () {
-    interval = setInterval(next, 5000);
-  };
+  if (slider) {
+    slider.onpointerdown = function () {
+      clearInterval(interval);
+    };
+    slider.onpointerup = function () {
+      interval = setInterval(next, 5000);
+    };
+  }
 }
 
 /*menu hamburguesa*/
