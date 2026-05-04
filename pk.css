@@ -164,12 +164,13 @@ footer {
   display: none;
   font-size: 30px;
   cursor: pointer;
+  position: relative;
+  z-index: 999;
 }
 @media (max-width: 600px) {
   .menuToggle {
     display: block;
-      position: relative;
-  z-index: 999;
+
   }
   .buttonContainer {
     display: none;
