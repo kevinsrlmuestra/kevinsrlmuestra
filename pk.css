@@ -166,15 +166,73 @@ footer {
   cursor: pointer;
 }
 @media (max-width: 600px) {
-  .menuToggle {
-    display: block;
-
+  :root {
+    --headerHeight: 8vh;
+    --fontSizeNav: 1rem;
+    --fontSizeHero: 2rem;
+    --fontSizeSubhero: 1.2rem;
+    --buttonContainerWidth: 100%;
+    --contactGap: 3vw;
   }
+
+  header {
+    padding: 0 3vw;
+  }
+
   .buttonContainer {
     display: none;
+    position: absolute;
+    top: var(--headerHeight);
+    left: 0;
+    width: 100%;
     flex-direction: column;
+    background-color: var(--colorBackGround);
   }
+
   .buttonContainer.active {
     display: flex;
+  }
+
+  .buttonContainer div {
+    padding: 2vh;
+    text-align: center;
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+  }
+
+  .menuToggle {
+    display: block;
+  }
+
+  .contact {
+    gap: 1.5vw;
+  }
+
+  .whatsapp {
+    height: calc(var(--headerHeight) * 0.5);
+    margin: 2vw;
+  }
+
+  #slider {
+    height: 60vh;
+  }
+
+  .bloque h1 {
+    font-size: var(--fontSizeHero);
+    top: -60%;
+  }
+
+  .bloque p {
+    font-size: var(--fontSizeSubhero);
+    top: -60%;
+  }
+
+  .optionMenu {
+    flex-direction: column;
+    height: auto;
+  }
+
+  .optionMenu div {
+    width: 90%;
+    height: auto;
   }
 }

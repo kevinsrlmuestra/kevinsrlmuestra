@@ -1,3 +1,5 @@
+var isMobile = window.matchMedia("(max-width: 600px)").matches;
+
 /*Animacion del cambio de imagen*/
 var slides = document.querySelectorAll("#slider div");
 var index = 0;
@@ -12,15 +14,23 @@ function next() {
   index = (index + 1) % slides.length;
   showSlide(index);
 }
+
 showSlide(index);
-interval = setInterval(next, 5000);
-var slider = document.getElementById("slider");
-slider.onpointerdown = function () {
-  clearInterval(interval);
-};
-slider.onpointerup = function () {
+
+if (!isMobile) {
   interval = setInterval(next, 5000);
-};
+
+  var slider = document.getElementById("slider");
+
+  slider.onpointerdown = function () {
+    clearInterval(interval);
+  };
+
+  slider.onpointerup = function () {
+    interval = setInterval(next, 5000);
+  };
+}
+
 /*menu hamburguesa*/
 var toggle = document.querySelector(".menuToggle");
 var menu = document.querySelector(".buttonContainer");
