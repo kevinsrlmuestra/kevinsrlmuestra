@@ -168,6 +168,8 @@ footer {
 @media (max-width: 600px) {
   .menuToggle {
     display: block;
+      position: relative;
+  z-index: 999;
   }
   .buttonContainer {
     display: none;
